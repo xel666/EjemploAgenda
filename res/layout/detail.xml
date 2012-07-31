@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/picture_emergency"
+                android:layout_gravity="center_horizontal"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre"/>
+        <TextView
+                android:id="@+id/lblNombre"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Ejemplo de Nombre"/>
+        <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/divisor"
+                android:layout_margin="4dp"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/apellido"/>
+        <TextView
+                android:id="@+id/lblApellido"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="del Apellido"/>
+        <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/divisor"
+                android:layout_margin="4dp"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telefonos"/>
+        <LinearLayout
+                android:id="@+id/lstTelefonos"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/divisor"
+                android:layout_margin="4dp"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emails"/>
+        <LinearLayout
+                android:id="@+id/lstEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/divisor"
+                android:layout_margin="4dp"/>
+    </LinearLayout>
+
+</ScrollView>
