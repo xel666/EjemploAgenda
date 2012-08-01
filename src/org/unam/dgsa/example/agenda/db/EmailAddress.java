@@ -12,6 +12,14 @@ public class EmailAddress {
     private Contacto contacto;
     private String value;
 
+    public EmailAddress() {
+    }
+
+    public EmailAddress(Contacto contacto, String value) {
+        this.contacto = contacto;
+        this.value = value;
+    }
+
     public Contacto getContacto() {
         return contacto;
     }

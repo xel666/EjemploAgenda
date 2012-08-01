@@ -12,6 +12,14 @@ public class Telefono {
     private Contacto contacto;
     private String value;
 
+    public Telefono() {
+    }
+
+    public Telefono(Contacto contacto, String value) {
+        this.contacto = contacto;
+        this.value = value;
+    }
+
     public Contacto getContacto() {
         return contacto;
     }

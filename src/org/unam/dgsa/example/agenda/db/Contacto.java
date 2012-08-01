@@ -1,5 +1,6 @@
 package org.unam.dgsa.example.agenda.db;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -15,6 +16,17 @@ public class Contacto {
     private String apellido;
     private Set<Telefono> telefonos;
     private Set<EmailAddress> direcciones;
+
+    public Contacto() {
+        telefonos=new HashSet<Telefono>();
+        direcciones=new HashSet<EmailAddress>();
+    }
+
+    public Contacto(String nombre, String apellido) {
+        this();
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
 
     public String getApellido() {
         return apellido;
