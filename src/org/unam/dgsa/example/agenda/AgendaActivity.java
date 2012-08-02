@@ -26,7 +26,16 @@ public class AgendaActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setListAdapter(new ContactAdapter(this, contactos));
+        setListAdapter(new ContactAdapter(this));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ContactAdapter adapter = (ContactAdapter) getListAdapter();
+        adapter.clear();
+        for(Contacto c : contactos)
+            adapter.add(c);
     }
 
     @Override
@@ -38,6 +47,8 @@ public class AgendaActivity extends ListActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId()!=R.id.mni_nuevo) return false;
+        Intent intent = new Intent(Intent.ACTION_INSERT, null, this, EditActivity.class);
+        startActivity(intent);
         return true;
     }
 }

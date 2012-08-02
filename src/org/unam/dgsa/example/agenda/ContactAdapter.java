@@ -22,8 +22,8 @@ import java.util.List;
 public class ContactAdapter extends ArrayAdapter<Contacto> {
     private LayoutInflater mInflater;
 
-    public ContactAdapter(Context context, List<Contacto> data) {
-        super(context, 0, 0, data);
+    public ContactAdapter(Context context) {
+        super(context, 0);
         mInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
