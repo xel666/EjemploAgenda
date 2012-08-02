@@ -6,4 +6,5 @@
     <string name="telefonos">Números telefónicos</string>
     <string name="emails">Dir. de correo electrónico</string>
     <string name="msg_tels_empty">Sin teléfono</string>
+    <string name="save">Guardar</string>
 </resources>

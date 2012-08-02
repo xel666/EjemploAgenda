@@ -1,98 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-    <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-        <ImageView
-                android:id="@+id/imgFoto"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_gravity="center_horizontal"
-                android:background="#aaffffff"/>
-        <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/nombre"/>
-        <EditText
-                android:id="@+id/txtNombre"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="Ejemplo de Nombre"/>
-        <View
-                android:layout_width="fill_parent"
-                android:layout_height="2dp"
-                android:background="@color/divisor"
-                android:layout_margin="4dp"/>
-        <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/apellido"/>
-        <EditText
-                android:id="@+id/txtApellido"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="del Apellido"/>
-        <View
-                android:layout_width="fill_parent"
-                android:layout_height="2dp"
-                android:background="@color/divisor"
-                android:layout_margin="4dp"/>
-        <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/telefonos"
-                    android:layout_weight="1"/>
-            <Button
-                    android:id="@+id/btnAddTels"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:drawable/ic_menu_add"/>
 
-        </LinearLayout>
+
+
+    <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/panel_botones" >
+
         <LinearLayout
-                android:id="@+id/lstTelefonos"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        <View
-                android:layout_width="fill_parent"
-                android:layout_height="2dp"
-                android:background="@color/divisor"
-                android:layout_margin="4dp"/>
-        <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:orientation="vertical" >
+
+            <ImageView
+                    android:id="@+id/imgFoto"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#aaffffff" />
+
             <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/emails"
-                    android:layout_weight="1"/>
-            <Button
-                    android:id="@+id/btnAddEmail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:drawable/ic_menu_add"/>
+                    android:text="@string/nombre" />
 
+            <EditText
+                    android:id="@+id/txtNombre"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe el nombre"
+                    android:textSize="20sp" />
+
+            <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_margin="4dp"
+                    android:background="@color/divisor" />
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/apellido" />
+
+            <EditText
+                    android:id="@+id/txtApellido"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe el apellido"
+                    android:textSize="20sp" />
+
+            <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_margin="4dp"
+                    android:background="@color/divisor" />
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/telefonos" />
+
+                <Button
+                        android:id="@+id/btnAddTels"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/ic_menu_add" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/lstTelefonos"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_margin="4dp"
+                    android:background="@color/divisor" />
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/emails" />
+
+                <Button
+                        android:id="@+id/btnAddEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/ic_menu_add" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/lstEmail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_margin="4dp"
+                    android:background="@color/divisor" />
         </LinearLayout>
-        <LinearLayout
-                android:id="@+id/lstEmail"
-                android:layout_width="fill_parent"
+    </ScrollView>
+
+
+
+    <LinearLayout
+            android:id="@+id/panel_botones"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@color/divisor" >
+
+
+
+
+
+        <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        <View
-                android:layout_width="fill_parent"
-                android:layout_height="2dp"
-                android:background="@color/divisor"
-                android:layout_margin="4dp"/>
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="@string/save" />
+
+
+
+
+
+        <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="@android:string/cancel" />
+
     </LinearLayout>
 
-</ScrollView>
+</RelativeLayout>
