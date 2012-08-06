@@ -3,6 +3,8 @@ package org.unam.dgsa.example.agenda.db;
 import java.util.HashSet;
 import java.util.Set;
 
+import android.database.Cursor;
+
 /**
  * Created with IntelliJ IDEA.
  * User: xel666
@@ -11,6 +13,9 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 public class Contacto {
+	public static final String COL_ID="id";
+	public static final String COL_NOMBRE="nombre";
+	public static final String COL_APELLIDO="apellido";
     private int id;
     private String nombre;
     private String apellido;
@@ -28,7 +33,14 @@ public class Contacto {
         this.apellido = apellido;
     }
 
-    public String getApellido() {
+    public Contacto(Cursor c) {
+    	this();
+    	id=c.getInt(c.getColumnIndex(COL_ID));
+    	nombre=c.getString(c.getColumnIndex(COL_NOMBRE));
+    	apellido=c.getString(c.getColumnIndex(COL_APELLIDO));
+	}
+
+	public String getApellido() {
         return apellido;
     }
 

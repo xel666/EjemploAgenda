@@ -1,5 +1,7 @@
 package org.unam.dgsa.example.agenda;
 
+import org.unam.dgsa.example.agenda.db.Contacto;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +10,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import org.unam.dgsa.example.agenda.db.Contacto;
 
 /**
  * Created with IntelliJ IDEA.
@@ -52,13 +53,34 @@ public class EditActivity extends Activity {
                 save();
             }
         });
+        findViewById(R.id.btnAddTels).setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				if(BuildConfig.DEBUG) Log.d(EditActivity.class.getSimpleName(), 
+						"btnAddTels click");
+			}
+        	
+        });
     }
 
-    private void save() {
+	@Override
+	protected void onResume() {
+		super.onResume();
+		ContactosDbAdapter.open(this);
+	}
+
+    @Override
+	protected void onPause() {
+		super.onPause();
+		ContactosDbAdapter.close();
+	}
+
+	private void save() {
         contacto.setNombre(txtNombre.getText().toString());
         contacto.setApellido(txtApellido.getText().toString());
         if(inserting)
-            AgendaActivity.contactos.add(contacto);
+            ContactosDbAdapter.insert(contacto);
         setResult(RESULT_OK);
         finish();
     }
