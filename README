@@ -1,2 +1,5 @@
 Proyecto de agenda.
-Modifique los botones que agregan direcciones de correo y teléfonos.
+Como proyecto final deben de terminar este proyecto, actualmente incluye persistencia de contactos usando sqlite, sin las
+fotografías, teléfonos y correos. Deberán almacenar todos estos rubros para que se considere como completa incluyendo las
+validaciones necesarias. La aplicación debe de mantener su estado entre cambios de orientación y el código debe de estar
+indentado y bien estructurado.
